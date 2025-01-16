@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-data-binding',
@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './data-binding.component.css'
 })
 export class DataBindingComponent {
+  @Input() dataStr:string ="";
   
   firstName :string = "Gaurav";
   rollNo :number = 101;

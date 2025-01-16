@@ -1,0 +1,34 @@
+<p class="m-3">ng-if works!</p>
+<!-- <div>
+    Testing Input
+    <p>Test Data: {{dataStr}}</p>
+
+    Testing Output
+    <button (click)="sendNotification()">Notify Parent</button>
+</div> -->
+
+<div class="row">
+    <div class="col-3">
+        <div class="bg-success p-3" *ngIf="div1Visible">
+            Div 1
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="bg-primary p-3" *ngIf="number1 == number2">
+            Div 2
+        </div>
+    </div>
+</div>
+<div class="container">
+    <!-- <div class="mb-3 bg-success p-3" *ngIf="div1Visible">
+        Div 1
+    </div> -->
+    <div class="m-3 buttons">
+        <button class="m-2 btn btn-primary" (click)="showDiv()">Show</button>
+        <button class="m-2 btn btn-danger"(click)="hideDiv()">Hide</button>
+    </div>
+    <div class="m-3 numbers">
+        <input type="text" [(ngModel)]="number1">
+        <input type="text" [(ngModel)]="number2">
+    </div>    
+</div>

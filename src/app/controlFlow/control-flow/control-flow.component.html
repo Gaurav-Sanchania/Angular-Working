@@ -1,0 +1,39 @@
+<p>control-flow works!</p>
+
+<div class="row m-1">
+    <div class="col-3">
+        @if(div1Visible){
+            <div class="bg-success p-3">
+                Div 1
+            </div>
+        }
+    </div>
+    <div class="col-3">
+        @if(isChecked) {
+            <div class="bg-primary p-3">
+                Checkbox checked
+            </div>
+        } @else {
+            <div class="bg-danger p-3">
+                Checkbox unchecked
+            </div>
+        }
+    </div>
+    <div class="col-3">
+        <select name="" id="">
+            @for(item of cityList; track $index) {
+                <option value="">{{item}}</option>
+            }
+        </select>
+    </div>
+</div>
+
+<div class="row m-1">
+    <div class="col-3">
+        <button class="btn btn-success m-1" (click)="divVisible(true)">Show</button>
+        <button class="btn btn-danger m-1" (click)="divVisible(false)">Hide</button>
+    </div>
+    <div class="col-3">
+        <input type="checkbox" [(ngModel)]="isChecked">
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<p class="m-2">ng-for works!</p>
+
+<div class="row">
+    <div class="col-3">
+        <ul>
+            <li *ngFor="let city of cityList"> {{city}} </li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <select name="" id="" >
+            <option value="" disabled selected>--Select employee--</option>
+            <option *ngFor="let emp of employeeList" [value]="emp.empId">{{emp.name}}</option>
+        </select>
+    </div>
+</div>

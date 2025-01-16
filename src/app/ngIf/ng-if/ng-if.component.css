@@ -1,0 +1,10 @@
+.buttons {
+    /* position: absolute; */
+    top: 150px;
+    left: 100px;   
+}
+
+.numbers {
+    margin: 1px;
+    /* position: absolute; */
+}

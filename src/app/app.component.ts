@@ -8,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'second-app-ngmodule';
+
+  // handleNotification(message: string){
+  //   console.log('Received from child: ', message);
+  // }
 }
