@@ -14,6 +14,9 @@ import { ControlFlowComponent } from './controlFlow/control-flow/control-flow.co
 import { FormsComponent } from './Forms/forms/forms.component';
 import { ReactiveFormComponent } from './Forms/reactive-form/reactive-form.component';
 import { GetComponent } from './API/get/get.component';
+import { PostComponent } from './API/post/post.component';
+import { DeleteComponent } from './API/delete/delete.component';
+// import { HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,9 @@ import { GetComponent } from './API/get/get.component';
     ControlFlowComponent,
     FormsComponent,
     ReactiveFormComponent,
-    GetComponent
+    GetComponent,
+    PostComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +39,8 @@ import { GetComponent } from './API/get/get.component';
     FormsModule,
     NgIf,
     NgFor,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    // HttpClient,
   ],
   providers: [],
   bootstrap: [AppComponent]

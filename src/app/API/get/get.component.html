@@ -1,1 +1,36 @@
 <p>get works!</p>
+
+<div class="row">
+    <div class="col-3">
+        <button class="btn btn-success" (click)="getUser()">Load Users</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Sr No.</th>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Website</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(user of userList; track $index) {
+                    <tr>
+                        <td>{{$index + 1}}</td>
+                        <td>{{user.name}}</td>
+                        <td>{{user.username}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.phone}}</td>
+                        <td>{{user.website}}</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

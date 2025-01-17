@@ -9,6 +9,9 @@ import { ControlFlowComponent } from './controlFlow/control-flow/control-flow.co
 import { FormsComponent } from './Forms/forms/forms.component';
 import { ReactiveFormComponent } from './Forms/reactive-form/reactive-form.component';
 import { GetComponent } from './API/get/get.component';
+import { provideHttpClient } from '@angular/common/http';
+import { PostComponent } from './API/post/post.component';
+import { DeleteComponent } from './API/delete/delete.component';
 // import { AppComponent } from './app.component';
 
 const routes: Routes = [
@@ -21,11 +24,14 @@ const routes: Routes = [
   { path: 'controlflow', component: ControlFlowComponent},
   { path: 'forms', component: FormsComponent},
   { path: 'reactiveforms', component: ReactiveFormComponent},
-  { path: 'apiGet', component: GetComponent}
+  { path: 'getapi', component: GetComponent},
+  { path: 'postapi', component: PostComponent},
+  { path: 'deleteapi', component: DeleteComponent},
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [provideHttpClient()],
 })
 export class AppRoutingModule { }
